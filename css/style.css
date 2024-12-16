@@ -1,0 +1,272 @@
+body{
+    margin: 0px;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: justify;
+    line-height: 1.4;
+    /* font smoot  */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+:root{
+    --bg-light:#fff;
+    --bg-dark:#000;
+    --border-color-dark:#374151;
+    --border-color-light:#dddddd;
+    --text-color-gray:#9ca3af;
+}
+
+#main-container{
+    display: flex; 
+}
+.light#main-container, .dark .skill-name, .dark .leftline::before{
+    background-color: var(--bg-light);
+    color: var(--bg-dark);
+    -moz-transition: all 1s ease-in;
+    /* WebKit */
+    -webkit-transition: all 1s ease-in;
+    /* Opera */
+    -o-transition: all 1s ease-in;
+    /* Standard */
+    transition: all 0.5s ease-in;
+}
+.dark#main-container, .light .skill-name, .light .leftline::before{
+    background-color: var(--bg-dark);
+    color: var(--bg-light);
+    -moz-transition: all 1s ease-in;
+    /* WebKit */
+    -webkit-transition: all 1s ease-in;
+    /* Opera */
+    -o-transition: all 1s ease-in;
+    /* Standard */
+    transition: all 0.5s ease-in;
+}
+.light .sidebar, .light .bdr-bot, .light .leftline{
+   border-color: var(--border-color-light);
+}
+.dark .sidebar, .dark .bdr-bot, .dark .leftline{
+    border-color: var(--border-color-dark);
+}
+.light .icons .size-2{
+    fill: var(--bg-dark);
+}
+.dark .icons .size-2{
+    fill: var(--bg-light);
+}
+
+.sidebar{
+    width: 100%;
+    border-right: 1px solid;
+    flex:1;
+    padding: 20px;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap:10px;
+    position: relative;
+}
+
+
+.toggle-btn-mode {
+    position: absolute;
+    right: 15px;
+    top: 15px;
+    border: none;
+    padding: 2px 4px;
+    cursor: pointer;
+    height: 20px;
+}
+
+.pic-name{
+text-align: center;
+margin-bottom: 20px;
+}
+
+.pic-name img{
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    object-position: top;
+    border: 4px solid #ddd;
+}
+h1{
+    margin: 0px;
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.name span{
+    font-weight: normal;
+}
+
+.title{
+    margin: -5px;
+    font-size: 18px;
+    font-weight: normal;
+}
+
+a{
+    text-decoration: none;
+    color: var(--primary-color);
+}
+a:hover{
+    color: var(--primary-color);
+}
+
+.contact p, .icons p{
+    margin: 0px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 10px 0px;
+}
+.size-2{
+    width: 20px;
+    height: 20px;
+}
+
+.bdr-bot{
+    border-bottom: 1px solid;
+    width: 100%;
+    padding-bottom: 20px;
+}
+.education ul, .box ul{
+list-style: none;
+margin: 0px;
+padding: 0px;
+}
+.leftline{
+    border-left: 1px solid;
+    padding:20px;
+    position: relative;
+}
+
+.leftline::before{
+    content: ''; 
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    left: -5px;
+    top: 45%;
+}
+
+h2{
+    text-transform: uppercase;
+}
+
+h3{
+    font-size: 20px;
+    margin: 0px;
+    text-transform:capitalize;
+}
+
+P{ 
+    margin:5px 0 5px 0;
+}
+
+.text-light{
+    font-size: 16px;
+    color: #687382;
+    font-weight: 300;
+    margin-top: 0;
+}
+
+.dark .text-light{
+    /* color:lawngreen; */
+    color:#cc00ff;
+}
+
+.text-gray{
+    color: var(--text-color-gray);
+}
+
+
+.skillbox{
+    display: flex;
+    flex-wrap: wrap;
+    gap:8px;
+}
+
+.skill-name{
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: capitalize;
+}
+
+.list{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    position: relative;
+    font-size: 13px;
+    text-transform: capitalize;
+}
+ul.list{
+    padding: 0px;
+
+}
+
+ul.list li{
+    margin-left: 20px;
+    
+}
+
+
+.content{
+    flex:3;
+    padding: 40px;
+}
+
+
+.about{
+    margin-bottom: 30px;
+}
+
+.box{
+    margin-bottom: 20px;
+}
+
+.box h1 {
+    margin-bottom: 12px;
+}
+
+.expericence{
+    display: flex;
+    gap: 20px;
+
+}
+
+.certification{
+    padding-right: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.hobbies h2{
+    text-transform: capitalize;
+}
+
+
+@media screen and (max-width: 767px) {
+    #main-container{
+        flex-direction: column;
+    }
+    .sidebar{
+        border-right: none;
+        width:auto;
+    }
+    .content{
+        padding: 20px;
+    }
+    .expericence{
+        flex-direction: column;
+        gap: 0;
+    }
+    .certification{
+        padding-right: 0px;
+    }
+}
